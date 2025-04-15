@@ -1,0 +1,211 @@
+body{
+    background: url('https://swall.teahub.io/photos/small/288-2883569_global-weather-from-earthcast-model-data-global-weather.jpg');
+    background-position: middle;
+    background-attachment: fixed;
+    color: white;
+    backdrop-filter: blur(15px);
+    /* background-color: bisque; */
+
+}
+
+.searchbar{
+    height: 10vh;
+    background: white;
+    /* background: url('https://swall.teahub.io/photos/small/288-2883569_global-weather-from-earthcast-model-data-global-weather.jpg'); */
+    /* backdrop-filter: blur(15px); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchbarparentdiv{
+    width: 50%;
+    height: fit-content;
+    position: relative;
+}
+.inputfield{
+    width: 100%;
+    border-radius: 25px;
+    padding: 10px;
+}
+.searchicon{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+.searchicon:hover{
+    cursor: pointer;
+}
+.maincontentparentdiv{
+    height: 90vh;
+}
+.leftdiv{
+    width: 30%;
+    /* border: 2px solid red; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.leftchild{
+    background: rgba(212,212,212,0.2);
+    width: 85%;
+    height: 40vh;
+    margin: auto;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+.currenttempdiv h6{
+    font-size: large;
+}
+#cityname{
+    font-size: xx-large;
+    font-family: "Raleway", sans-serif;
+}
+#citytemp{
+    font-size: x-large;
+    font-family: "Raleway", sans-serif;
+}
+#comingfivedaystittle{
+    font-size: x-large;
+    font-family: "Raleway", sans-serif;
+}
+
+.rightdiv{
+    width: 70%;
+    /* border: 2px solid red; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.rightrow{
+    height: 27vh;
+    width: 100%;
+    /* border: 2px white solid; */
+}
+.extrametric{
+    background: rgba(212,212,212,0.2);
+    backdrop-filter: blur(5px);
+    padding: 5% 2%;
+    width: fit-content;
+    border-radius: 15px;
+    align-items: center;
+}
+.rowtwodiv{
+    background: rgba(212,212,212,0.2); 
+    backdrop-filter: blur(5px);  
+    width: 45%;
+    height: 85%;
+    border-radius: 15px;
+}
+.sunrisediv{
+    padding-top: 15px;
+}
+.sunsetdiv{
+    padding-top: 15px;
+
+}
+.todaytemp{
+    background: rgba(212,212,212,0.2);
+    backdrop-filter: blur(4px);
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.sunsetrise{
+    font-size: x-large;
+    font-family: "Raleway", sans-serif;
+}
+.aqi{
+    font-family: "Raleway", sans-serif;
+    font-size: x-large;
+    font-weight: 0;
+}
+.todaytittle{
+    font-family: "Raleway", sans-serif;
+    font-size: x-large;
+}
+
+@media only screen and (max-width:767px){
+  body{
+    /* background: url('https://swall.teahub.io/photos/small/288-2883569_global-weather-from-earthcast-model-data-global-weather.jpg'); */
+    background-position: middle;
+    background-attachment: fixed;
+    color: white;
+    /* backdrop-filter: blur(15px); */
+    background-color: rgb(171, 154, 133);
+    height: 200vh;
+    width: 100vw;
+
+  }
+    
+    
+    .leftdiv{
+        width: 100%;
+        /* border: 2px solid red; */
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin: 15px;
+    }
+    .right{
+        width: 100%;
+    }
+    .maincontentparentdiv{
+        height: auto;
+        flex-direction: column;
+    }
+    .searchbar{
+        width: 100%;
+    }
+    .searchbarparentdiv{
+        width: 85%;
+        height: fit-content;
+        position: relative;
+    }
+    .rowone{
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 85%;
+        height: 20vh;
+        margin: auto;
+    }
+    .aqi{
+        flex-direction: row;
+    }
+    .rightrowrowtwo{
+        flex-direction: column;
+        gap: 10px;
+        /* align-items: center; */
+    }
+    
+    .rowthree{
+        width: 85%;
+        margin: auto;
+    }
+    .rowtwodiv{
+        background: rgba(212,212,212,0.2); 
+        backdrop-filter: blur(5px);  
+        width: 45%;
+        height: 85%;
+        border-radius: 15px;
+    }
+   
+   .todaytempparentdiv{
+       width: 100%;
+       flex-wrap: wrap;
+       margin: auto;
+       gap: 15px;
+
+   }
+    
+}   
+
+    
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="mybody">
+    <h1 id="myh" class="myh"> veera bhargav</h1>
+     <p id="myp">iam veera bhargav i"m from andhra pradesh ntr district jaggayyapet</p>
+      <a id="mya">you tube</a>
+
+
+    <script>
+        const element = document.getElementById("myh");
+        element.classList.add("myhnew");
+        element.classList.remove("myh");
+        const newelement = document.createElement("button");
+        newelement.textContent= "click here";
+        newelement.classList.add("button");
+        const body = document.getElementById("mybody");
+        body.appendChild(newelement);
+    </script>
+</body>
+</html>

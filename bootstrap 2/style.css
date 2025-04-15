@@ -1,0 +1,111 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body{
+    height: 270vh;
+    /* background-image: url('https://wallpapercave.com/wp/wp2919347.jpg'); */
+    background-size: cover;
+    background-position: center;
+ background-repeat: no-repeat;
+ background-color: rgb(18, 17, 23);
+}
+.item-search{
+    color: aquamarine;
+}
+.navbar-brand{
+      padding-left: 10px;
+}
+.item-nav{
+    color: black;
+    font-family: "Playfair Display", serif;
+
+}
+.item-nav:hover{
+    color: rgb(237, 9, 146);
+}
+.box-left{
+       /* border: 2px solid rgb(246, 242, 242); */
+       color:white;
+       padding-top: 130px;
+       text-align: right;
+      
+}
+.body-section{
+    padding-top: 100px;
+}
+.para-1{
+    text-align: left;
+    padding-left: 25px;
+    font-family: "Arsenal SC", serif;
+}
+.box-right{
+    /* border: 2px solid rgb(241, 239, 239); */
+    padding-left: 100px;
+
+}
+.box-right:hover{
+      color: rgb(232, 12, 166);
+}
+.para-2{
+    color: white;
+    /* text-decoration: underline; */
+    font-family: "Arsenal SC", serif;
+}
+.head-1{
+    padding-right: 20px;
+    /* text-decoration: underline rgb(217, 5, 5); */
+    font-family: "Playfair Display", serif;
+}
+.card-1{
+    color: white;
+    border: 2px white solid;
+    /* padding: 1px; */
+}
+.movies-h{
+    color: white;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    font-family: "Playfair Display", serif;
+    
+}
+.movie-h1{
+    text-align: center;
+    font-family: "Playfair Display", serif;
+}
+.movie-p1{
+    text-align: center;
+    font-family: "Arsenal SC", serif;
+}
+.card-1:hover{
+    color: rgb(238, 12, 181);
+}
+.col-3:hover{
+    color: rgb(238, 12, 181);
+}
+.about-h1{
+    text-align: center;
+    color: white;
+    padding-top: 80px;
+    font-family: "Playfair Display", serif;
+}
+.about-p1{
+    text-align: center;
+    color: white;
+    padding-top: 30px;
+    font-size: large;
+    font-family: "Arsenal SC", serif;
+}
+.platform-1{
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}
+.palt a{
+    padding-top: 50px;
+    margin: 10px;
+    /* padding: 10px; */
+}
+.plat-h{
+    padding-bottom: 20px;
+    font-family: "Playfair Display", serif;
+}

@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Live weather</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+     <div class="searchbar">
+         <div class="searchbarparentdiv">
+            <input type="text" class="inputfield" placeholder="search city">
+            <img src="https://static.vecteezy.com/system/resources/previews/016/716/177/original/search-3d-icon-png.png"  width="40px" alt="" class="searchicon" onclick="fetchData()">
+         </div>
+     </div>
+       <div class="maincontentparentdiv d-flex">
+         <div class="leftdiv">
+            <div class="currenttempdiv leftchild p-3 d-flex flex-column gap-2">
+                <h6 class="m-0" id="cityname">City Name</h6>
+                <h5 class="m-0" ><span id="citytemp"></span> 0°C</h5>
+                <h6 class="m-0" id="skydesc">Sky Description</h6>
+                <hr class="line">
+                <div class="d-flex gap-2">
+                    <img src="https://static.vecteezy.com/system/resources/previews/000/631/148/original/calendar-icon-symbol-sign-vector.jpg" width="25px" alt="">
+                    <h6 class="m-0" id="date">Date</h6>
+                </div>
+                <div class="d-flex gap-2">
+                    <img src="https://cdn-icons-png.flaticon.com/512/690/690455.png" width="25px" alt="">
+                    <h6 class="m-0" id="time">Time</h6>
+                </div>
+            </div>
+            <div class="nextfivedays leftchild p-3 d-flex flex-column gap-2">
+               <h6 class="m-0" id="comingfivedaystittle">Coming 5 Days</h6>
+               <div>
+                    <div class="forecastrow d-flex align-item-center justify-content-between">
+                        <div class="d-flex gap-3 align-item-center">
+                            <img src="https://cdn3.iconfinder.com/data/icons/ui-essentials-v2/1250/weather-clouds-cloud-phone-android-app-internet-1024.png" width="30px" alt="">
+                            <h6>7°C</h6>
+                        </div>
+                        <h6 class="m-1">Saturday</h6>
+                        <h6 class="m-1">14-12-2004</h6>
+                    </div>
+               </div>
+               <div>
+                <div class="forecastrow d-flex align-item-center justify-content-between">
+                    <div class="d-flex gap-3 align-item-center">
+                        <img src="https://cdn3.iconfinder.com/data/icons/ui-essentials-v2/1250/weather-clouds-cloud-phone-android-app-internet-1024.png" width="30px" alt="">
+                        <h6>7°C</h6>
+                    </div>
+                    <h6 class="m-0">Saturday</h6>
+                    <h6 class="m-0">14-12-2004</h6>
+                </div>
+           </div>
+           <div>
+            <div class="forecastrow d-flex align-item-center justify-content-between">
+                <div class="d-flex gap-3 align-item-center">
+                    <img src="https://cdn3.iconfinder.com/data/icons/ui-essentials-v2/1250/weather-clouds-cloud-phone-android-app-internet-1024.png" width="30px" alt="">
+                    <h6>7°C</h6>
+                </div>
+                <h6 class="m-0">Saturday</h6>
+                <h6 class="m-0">14-12-2004</h6>
+            </div>
+       </div>
+       <div>
+        <div class="forecastrow d-flex align-item-center justify-content-between">
+            <div class="d-flex gap-3 align-item-center">
+                <img src="https://cdn3.iconfinder.com/data/icons/ui-essentials-v2/1250/weather-clouds-cloud-phone-android-app-internet-1024.png" width="30px" alt="">
+                <h6>7°C</h6>
+            </div>
+            <h6 class="m-0">Saturday</h6>
+            <h6 class="m-0">14-12-2004</h6>
+        </div>
+   </div>
+   <div>
+    <div class="forecastrow d-flex align-item-center justify-content-between">
+        <div class="d-flex gap-3 align-item-center">
+            <img src="https://cdn3.iconfinder.com/data/icons/ui-essentials-v2/1250/weather-clouds-cloud-phone-android-app-internet-1024.png" width="30px" alt="">
+            <h6>7°C</h6>
+        </div>
+        <h6 class="m-0">Saturday</h6>
+        <h6 class="m-0">14-12-2004</h6>
+    </div>
+</div>
+            </div>
+         </div>
+
+         <div class="rightdiv">
+            <div class="rightrow rowone d-flex gap-2 justify-content-between align-items-center">
+                <div class="extrametric d-flex gap-3">
+                    <img src="https://static.vecteezy.com/system/resources/previews/024/825/155/non_2x/3d-weather-icon-sun-and-wind-free-png.png"  width="40px">
+                    <div>
+                        <h6 class="m-0">metric name</h6>
+                        <h6  class="m-0">metric value</h6>
+                    </div>
+        </div>
+        <div class="extrametric d-flex gap-3">
+            <img src="https://static.vecteezy.com/system/resources/previews/024/825/155/non_2x/3d-weather-icon-sun-and-wind-free-png.png"  width="40px">
+            <div>
+                <h6  class="m-0">metric name</h6>
+                <h6  class="m-0">metric value</h6>
+            </div>
+</div>
+     <div class="extrametric d-flex gap-3">
+    <img src="https://static.vecteezy.com/system/resources/previews/024/825/155/non_2x/3d-weather-icon-sun-and-wind-free-png.png"  width="40px">
+    <div>
+        <h6  class="m-0">metric name</h6>
+        <h6  class="m-0">metric value</h6>
+    </div>
+</div>
+    <div class="extrametric d-flex gap-3">
+    <img src="https://static.vecteezy.com/system/resources/previews/024/825/155/non_2x/3d-weather-icon-sun-and-wind-free-png.png"  width="40px">
+    <div>
+        <h6  class="m-0">metric name</h6>
+        <h6  class="m-0">metric value</h6>
+    </div>
+</div>
+            </div>
+            <div class="rightrow rowtwo d-flex justify-content-between ">
+                <div class="aqi rowtwodiv p-3 d-flex flex-column gap-2">
+                    <h5 class="aqi">ARI QUALITY INDEX (AQI)</h5>
+                     <div class="d-flex gap-2 align-items-center">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/024/825/195/small_2x/3d-weather-icon-day-with-rain-free-png.png" width="60px">
+                        <div class="text-center">
+                            <h6>AQI metric</h6>
+                            <h6>0</h6>
+                        </div>
+                        <div class="text-center">
+                            <h6>AQI metric</h6>
+                            <h6>0</h6>
+                        </div>
+                        <div class="text-center">
+                            <h6>AQI metric</h6>
+                            <h6>0</h6>
+                        </div>
+                        <div class="text-center">
+                            <h6>AQI metric</h6>
+                            <h6>0</h6>
+                        </div>
+                     </div>
+                </div>
+                <div class="sunrise rowtwodiv p-3">
+                     <h6 class="sunsetrise m-0">SUNRISE & SUNSET</h6>
+                     <div class=" d-flex justify-content-between">
+                        <div class="sunrisediv d-flex gap-3 align-items-center">
+                            <img src="https://cdn.pixabay.com/photo/2013/07/13/10/23/sun-157126_640.png" width="70px" alt="">
+                            <div class="d-flex flex-column gap-1">
+                             <h6 class="m-0">sunrise</h6>
+                             <h5 class="m-0" >6:00 AM</h5>
+                            </div>
+                      </div>
+                      <div class="sunsetdiv d-flex gap-3 align-items-center">
+                        <img src="https://png.pngtree.com/png-clipart/20230102/original/pngtree-moon-clipart-png-image_8855710.png" width="65px" alt="">
+                        <div class="d-flex flex-column gap-1">
+                         <h6 class="m-0">sunset</h6>
+                         <h5 class="m-0">6:00 AM</h5>
+                        </div>
+                   </div>
+                     </div>
+                </div>
+            </div>
+            <div class="rightrow rowthree d-flex flex-column gap-2">
+                <h5 class=" todaytittle m-0">TODAY</h5>
+                <div class="d-flex justify-content-between todaytempparentdiv">
+                    <div class="todaytemp">
+                        <h6 class="m-0">9:00 AM</h6>
+                        <img src="https://cdn3.iconfinder.com/data/icons/ui-essentials-v2/1250/weather-clouds-cloud-phone-android-app-internet-1024.png" width="35px" alt="">
+                        <h5>15°C</h5>
+                    </div>
+                    <div class="todaytemp">
+                        <h6 class="m-0">9:00 AM</h6>
+                        <img src="https://cdn0.iconfinder.com/data/icons/hotel-and-travel-2-1/52/56-512.png" width="35px" alt="">
+                        <h5>15°C</h5>
+                    </div>
+                    <div class="todaytemp">
+                        <h6 class="m-0">9:00 AM</h6>
+                        <img src="https://cdn.pixabay.com/photo/2013/07/13/10/23/sun-157126_640.png" width="40px" alt="">
+                        <h5>15°C</h5>
+                    </div>
+                    <div class="todaytemp">
+                        <h6 class="m-0">9:00 AM</h6>
+                        <img src="https://cdn3.iconfinder.com/data/icons/ui-essentials-v2/1250/weather-clouds-cloud-phone-android-app-internet-1024.png" width="35px" alt="">
+                        <h5>15°C</h5>
+                    </div>
+                    <div class="todaytemp">
+                        <h6 class="m-0">9:00 AM</h6>
+                        <img src="https://cdn0.iconfinder.com/data/icons/hotel-and-travel-2-1/52/56-512.png" width="35px" alt="">
+                        <h5>15°C</h5>
+                    </div>
+                    <div class="todaytemp">
+                        <h6 class="m-0">9:00 AM</h6>
+                        <img src="https://cdn0.iconfinder.com/data/icons/hotel-and-travel-2-1/52/56-512.png" width="35px" alt="">
+                        <h5>15°C</h5>
+                    </div>
+                </div>
+            </div>
+         </div>
+       </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script> 
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  
+     <script>
+
+        function dateformat(timestamp)
+
+        {
+           
+              const date = new date(timestamp * 1000);
+              console.log(date.toutcstring());
+              console.log(date.tolocalestring());
+              return date.tolocalestring();
+
+        }
+        
+        async function fetchData()
+
+         {
+
+           let cityname = document.getElementsByClassName('inputfield')[0].value;
+           console.log('current city: ',cityname)
+            let requestdata = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=33603ff2ec304adfcc49fea3fc4d9be8`)
+            let formatteddata = await requestdata.json();
+            console.log("formatted data: ",formatteddata);
+            let responsecityname = formatteddata.name
+            let responsetemp = formatteddata.main.temp
+            let skydescription = formatteddata.weather[0].description
+
+            $('#cityname')[0].innerText=responsecityname;
+            $('#citytemp')[0].innerText=responsetemp;
+            $('#skydesc')[0].innerText=skydescription
+
+            console.log('response temp: ',responsetemp);
+            console.log('response in city name: ',responsecityname);
+            console.log('response sky description: ',skydescription);
+
+            let properdate = dateformat(formatteddata.dt);
+            console.log('line 251: ',properdate);
+            let date=properdate.split(',')[0]
+            let time=properdate.split(',')[0]
+            console.log("line 254: ",date,time)
+
+            $("#date")[0].innerText=date;
+            $("#time")[0].innerText=time
+         }
+
+
+
+     </script>
+
+
+
+
+</body>
+</html>

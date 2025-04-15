@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hover" id="hover">
+        hover over here !
+    </div>
+
+
+    <script>
+
+       const div = document.getElementById("hover");
+
+       function change(){
+          div.style.backgroundColor="lightblue";
+       }
+
+       function restor(){
+           div.style.backgroundColor="white";
+       }
+
+       div.addEventListener("mouseenter",change);
+       div.addEventListener("mouseleave",restor);
+
+    </script>
+
+</body>
+</html>
